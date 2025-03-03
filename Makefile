@@ -9,7 +9,7 @@ patch:
 nif: patch
 	@echo "Compiling NIF in $(build_dir)"
 	@mkdir -p $(build_dir)
-	@cmake -DCRC32C_USE_GLOG=0 -DCRC32C_BUILD_TESTS=0 -DCRC32C_BUILD_BENCHMARKS=0 . -B $(build_dir)
+	@cmake -DCRC32C_USE_GLOG=0 -DCRC32C_BUILD_TESTS=0 -DCRC32C_BUILD_BENCHMARKS=1 . -B $(build_dir)
 	@cmake --build $(build_dir)
 
 erl:
