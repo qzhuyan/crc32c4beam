@@ -1,7 +1,7 @@
 crc32c4beam
 =====
 
-An OTP library
+crc32c4beam NIF wrapper of [google/crc32c](https://github.com/google/crc32c)
 
 Build
 -----
