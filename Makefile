@@ -3,10 +3,7 @@ default: nif erl
 
 build_dir := c_build
 
-patch:
-	cd google/crc32c && patch -p1 < ../../arm_small_batch.patch || echo "apply patch failed"
-
-nif: patch
+nif:
 	@echo "Compiling NIF in $(build_dir)"
 	@mkdir -p $(build_dir)
 	@cmake -DCRC32C_USE_GLOG=0 -DCRC32C_BUILD_TESTS=0 -DCRC32C_BUILD_BENCHMARKS=1 . -B $(build_dir)
