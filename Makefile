@@ -4,7 +4,7 @@ default: nif erl
 build_dir := c_build
 
 patch:
-	cd google/crc32c && patch -p1 < ../../arm_small_batch.patch
+	cd google/crc32c && patch -p1 < ../../arm_small_batch.patch || echo "apply patch failed"
 
 nif: patch
 	@echo "Compiling NIF in $(build_dir)"
