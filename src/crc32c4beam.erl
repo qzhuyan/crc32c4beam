@@ -77,8 +77,8 @@ perf_test() ->
         end,
         millisecond
     ),
-    io:format("Size: ~p, Elapsed time: ~p ms~n", [byte_size(Data), Elapsed]),
-    ?assert(Elapsed < 100).
+    ?debugFmt("Size: ~p, Elapsed time: ~p ms~n", [byte_size(Data), Elapsed]),
+    ?assert(Elapsed < 10).
 
 license_crc() ->
     16#7dcde113.
